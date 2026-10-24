@@ -8,7 +8,7 @@ Proyecto original: <https://github.com/digininja/DVWA>
 
 ## Opción 1 · GitHub Codespaces (recomendada)
 
-[![Abrir en GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/titansec/lab-dvwa?quickstart=1)
+[![Abrir en GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/c0re1/lab-dvwa?quickstart=1)
 
 1. Pulsar el botón (requiere cuenta de GitHub; usa la cuota gratuita personal de Codespaces).
 2. Al terminar de crearse, el contenedor ejecuta `docker compose up -d` automáticamente.
@@ -24,7 +24,7 @@ Para ahorrar cuota: detener el Codespace al terminar (*Codespaces → Stop*) y e
 Con Docker instalado, un solo comando:
 
 ```bash
-git clone https://github.com/titansec/lab-dvwa.git && cd lab-dvwa && docker compose up -d
+git clone https://github.com/c0re1/lab-dvwa.git && cd lab-dvwa && docker compose up -d
 ```
 
 Abrir <http://127.0.0.1:4280/>. Para detener: `docker compose down`.
