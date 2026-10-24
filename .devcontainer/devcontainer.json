@@ -1,0 +1,17 @@
+{
+  "name": "TS Cyber Academy · DVWA",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  // Máquina mínima (2 núcleos) para gastar la menor cuota posible.
+  "hostRequirements": { "cpus": 2 },
+  "postStartCommand": "bash .devcontainer/start.sh",
+  "forwardPorts": [4280],
+  "portsAttributes": {
+    "4280": { "label": "DVWA", "onAutoForward": "openBrowser" }
+  },
+  "customizations": {
+    "codespaces": { "openFiles": ["README.md"] }
+  }
+}

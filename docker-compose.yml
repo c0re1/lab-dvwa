@@ -1,0 +1,28 @@
+# TS Cyber Academy · Lab DVWA (Damn Vulnerable Web Application)
+# App deliberadamente vulnerable: se publica SOLO en 127.0.0.1.
+services:
+  dvwa:
+    image: ghcr.io/digininja/dvwa:latest
+    container_name: ts-lab-dvwa
+    environment:
+      DB_SERVER: db
+    depends_on:
+      - db
+    ports:
+      - "127.0.0.1:4280:80"
+    restart: unless-stopped
+
+  db:
+    image: docker.io/library/mariadb:10
+    container_name: ts-lab-dvwa-db
+    environment:
+      MYSQL_ROOT_PASSWORD: dvwa
+      MYSQL_DATABASE: dvwa
+      MYSQL_USER: dvwa
+      MYSQL_PASSWORD: p@ssw0rd
+    volumes:
+      - dvwa:/var/lib/mysql
+    restart: unless-stopped
+
+volumes:
+  dvwa:
