@@ -6,6 +6,10 @@ services:
     container_name: ts-lab-dvwa
     environment:
       DB_SERVER: db
+    volumes:
+      # Corrige la cookie de sesión detrás del proxy de Codespaces (ver php/forwarded-host.php)
+      - ./php/forwarded-host.php:/opt/ts-lab/forwarded-host.php:ro
+      - ./php/zz-forwarded-host.ini:/usr/local/etc/php/conf.d/zz-forwarded-host.ini:ro
     depends_on:
       - db
     ports:
