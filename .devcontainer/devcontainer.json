@@ -1,6 +1,7 @@
 {
+  // Ubuntu 24.04 fijado: en "ubuntu" (26.04) docker-in-docker aún no instala.
   "name": "TS Cyber Academy · DVWA",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
